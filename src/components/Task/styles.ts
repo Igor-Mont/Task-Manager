@@ -10,7 +10,6 @@ const Container = styled.div`
   justify-content: space-between;
 
   padding: 0.5rem 1rem;
-  /* border-radius: 0.2rem; */
 
   .functional-box {
     width: 40%;
@@ -28,9 +27,12 @@ const Container = styled.div`
   }
 
   .box-title {
-    width: 60%;
+    width: 55%;
     
     h3 {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
       color: white;
     }
   }

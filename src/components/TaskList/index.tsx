@@ -1,9 +1,15 @@
+import { Task } from '../Task';
 import { Container } from './styles';
 
 function TaskList(): JSX.Element {
   return (
     <Container>
-      <h1>Task List</h1>
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
     </Container>
   );
 }
