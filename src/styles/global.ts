@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     @media (max-width: 1080px) {
       font-size: 93.75%;
     }
-    
+
     @media (max-width: 720px) {
       font-size: 87.5%;
     }
@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button {
-    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
   }
 
@@ -33,6 +33,8 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+    border: 0;
+    background: none;
   }
 
   [disabled] {
