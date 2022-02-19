@@ -6,7 +6,7 @@ import completeIMG from '../../assets/complete.svg'
 function Task(): JSX.Element {
   return (
     <Container>
-      <div className="title">
+      <div className="box-title">
         <h3>Title</h3>
       </div>
       <div className="functional-box">

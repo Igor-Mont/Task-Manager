@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var(--background);
+    background-color: black;
     -webkit-font-smoothing: antialiased;
   }
 

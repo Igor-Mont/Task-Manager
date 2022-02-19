@@ -13,15 +13,13 @@ const Container = styled.div`
   /* border-radius: 0.2rem; */
 
   .functional-box {
+    width: 40%;
+    height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
-
-    border: 1px solid black;
-
-    width: 40%;
-    height: 100%;
 
     img {
       width: 1.5rem;
@@ -29,8 +27,12 @@ const Container = styled.div`
     }
   }
 
-  .title {
+  .box-title {
     width: 60%;
+    
+    h3 {
+      color: white;
+    }
   }
 `;
 
