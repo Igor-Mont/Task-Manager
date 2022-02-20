@@ -1,11 +1,11 @@
 import { Container } from './styles';
 
-type CreateTaskModalProps = {
+type UpdateTaskModalProps = {
   isOpen: boolean;
   onRequestClose: (modal: string, isOn: boolean) => void;
 }
 
-function CreateTaskModal({ isOpen, onRequestClose }: CreateTaskModalProps): JSX.Element {
+function UpdateTaskModal({ isOpen, onRequestClose }: UpdateTaskModalProps): JSX.Element {
   return (
     <Container>
       <h1>Create Task Modal</h1>
@@ -13,4 +13,4 @@ function CreateTaskModal({ isOpen, onRequestClose }: CreateTaskModalProps): JSX.
   );
 }
 
-export { CreateTaskModal };
+export { UpdateTaskModal };
