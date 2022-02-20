@@ -1,15 +1,25 @@
+import { useContext } from 'react';
+import Modal from "react-modal";
+import { ModalContext } from '../../contexts/ModalProvider';
 import { Container } from './styles';
 
-type UpdateTaskModalProps = {
-  isOpen: boolean;
-  onRequestClose: (modal: string, isOn: boolean) => void;
-}
+function UpdateTaskModal(): JSX.Element {
+  const {
+    handleOpenModal,
+    isUpdateTaskModalOpen,
+  } = useContext(ModalContext);
 
-function UpdateTaskModal({ isOpen, onRequestClose }: UpdateTaskModalProps): JSX.Element {
+  const onRequestClose = () => handleOpenModal('update', false);
+
   return (
-    <Container>
-      <h1>Create Task Modal</h1>
-    </Container>
+    <Modal
+      isOpen={isUpdateTaskModalOpen}
+      onRequestClose={onRequestClose}
+    >
+      <Container>
+        <h1>Delete Task Modal</h1>
+      </Container>
+    </Modal>
   );
 }
 

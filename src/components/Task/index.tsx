@@ -4,6 +4,7 @@ import deleteIMG from '../../assets/delete.svg'
 import completeIMG from '../../assets/complete.svg'
 
 function Task(): JSX.Element {
+
   return (
     <Container>
       <div className="box-title">

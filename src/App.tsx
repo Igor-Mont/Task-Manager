@@ -1,10 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CreateTaskModal } from "./components/CreateTaskModal";
 import { DeleteTaskModal } from "./components/DeleteTaskModal";
 import { TaskList } from "./components/TaskList";
 import { UpdateTaskModal } from "./components/UpdateTaskModal";
 import { ModalContext } from "./contexts/ModalProvider";
 import { GlobalStyle } from "./styles/global";
+import Modal from "react-modal";
+
+Modal.setAppElement('#root');
 
 function App() {
   const {
@@ -17,19 +20,13 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <TaskList />
-      <CreateTaskModal
-        isOpen={isCreateTaskModalOpen}
-        onRequestClose={handleOpenModal}
-      />
-      <UpdateTaskModal
-        isOpen={isUpdateTaskModalOpen}
-        onRequestClose={handleOpenModal}
-      />
-      <DeleteTaskModal
-        isOpen={isDeleteTaskModalOpen}
-        onRequestClose={handleOpenModal}
-      />
+      {/* <TaskList /> */}
+      <button onClick={() => handleOpenModal('create', true)}>
+        ABRIR
+      </button>
+      <CreateTaskModal />
+      <UpdateTaskModal />
+      <DeleteTaskModal />
     </>
   )
 }
