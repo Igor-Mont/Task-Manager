@@ -15,6 +15,8 @@ function CreateTaskModal(): JSX.Element {
     <Modal
       isOpen={isCreateTaskModalOpen}
       onRequestClose={onRequestClose}
+      overlayClassName="react-modal-overlay"
+      className="react-modal-content"
     >
       <Container>
         <h1>Create Task Modal</h1>

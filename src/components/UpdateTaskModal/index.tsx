@@ -15,9 +15,11 @@ function UpdateTaskModal(): JSX.Element {
     <Modal
       isOpen={isUpdateTaskModalOpen}
       onRequestClose={onRequestClose}
+      overlayClassName="react-modal-overlay"
+      className="react-modal-content"
     >
       <Container>
-        <h1>Delete Task Modal</h1>
+        <h1>Update Task Modal</h1>
       </Container>
     </Modal>
   );

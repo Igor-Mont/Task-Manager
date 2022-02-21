@@ -20,10 +20,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      {/* <TaskList /> */}
-      <button onClick={() => handleOpenModal('create', true)}>
-        ABRIR
-      </button>
+      <TaskList />
       <CreateTaskModal />
       <UpdateTaskModal />
       <DeleteTaskModal />

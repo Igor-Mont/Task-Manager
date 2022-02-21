@@ -3,7 +3,6 @@ import Modal from "react-modal";
 import { ModalContext } from '../../contexts/ModalProvider';
 import { Container } from './styles';
 
-
 function DeleteTaskModal(): JSX.Element {
   const {
     handleOpenModal,
@@ -16,6 +15,8 @@ function DeleteTaskModal(): JSX.Element {
     <Modal
       isOpen={isDeleteTaskModalOpen}
       onRequestClose={onRequestClose}
+      overlayClassName="react-modal-overlay"
+      className="react-modal-content"
     >
       <Container>
         <h1>Delete Task Modal</h1>
