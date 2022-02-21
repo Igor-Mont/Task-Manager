@@ -10,6 +10,7 @@ const Container = styled.div`
   justify-content: space-between;
 
   padding: 0.5rem 1rem;
+  cursor: grabbing;
 
   .functional-box {
     width: 40%;
