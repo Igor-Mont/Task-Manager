@@ -5,6 +5,7 @@ import deleteIMG from '../../assets/delete.svg'
 import completeIMG from '../../assets/complete.svg'
 import { useContext, useRef } from 'react';
 import { ModalContext } from '../../contexts/ModalProvider';
+import { TaskContext } from '../../contexts/TasksContext';
 
 type TaskProps = {
   title: string;
@@ -18,13 +19,15 @@ type Item = {
 }
 
 function Task({ id, title, index }: TaskProps): JSX.Element {
-  const ref = useRef();
+  const { move } = useContext(TaskContext);
+
+  const ref = useRef<HTMLDivElement>();
   const { handleOpenModal } = useContext(ModalContext);
 
   const [{ isDragging }, dragRef] = useDrag({
     item: { type: 'TASK', index},
     collect: monitor => ({
-      isDragging: monitor.isDragging,
+      isDragging: monitor.isDragging(),
     }),
     type: 'TASK'
   });
@@ -32,8 +35,24 @@ function Task({ id, title, index }: TaskProps): JSX.Element {
   const [, dropRef ] = useDrop({
     accept: 'TASK',
     hover(item: Item , monitor) {
-      console.log(item.index);
-      console.log(index)
+      const draggedIndex = item.index;
+      const targetIndex = index;
+
+      if(draggedIndex === targetIndex) return;
+
+      const targetSize = ref.current.getBoundingClientRect();
+      const targetCenter = (targetSize.bottom - targetSize.top) / 2;
+
+      const draggedOffset = monitor.getClientOffset();
+      const draggedTop = draggedOffset.y - targetSize.top;
+
+      if(draggedIndex < targetIndex && draggedTop < targetCenter) return;
+
+      if(draggedIndex > targetIndex && draggedTop > targetCenter) return;
+
+      move(draggedIndex, targetIndex);
+
+      item.index = targetIndex;
     }
   });
 

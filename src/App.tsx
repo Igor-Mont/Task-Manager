@@ -7,6 +7,7 @@ import { DndProvider } from 'react-dnd';
 import { GlobalStyle } from "./styles/global";
 import { ModalContextProvider } from './contexts/ModalProvider'
 import Modal from "react-modal";
+import { TaskContextProvider } from './contexts/TasksContext';
 
 Modal.setAppElement('#root');
 
@@ -16,7 +17,9 @@ function App() {
     <ModalContextProvider>
       <DndProvider backend={HTML5Backend}>
         <GlobalStyle />
-        <TaskList />
+        <TaskContextProvider>
+          <TaskList />
+        </TaskContextProvider>
         <CreateTaskModal />
         <UpdateTaskModal />
         <DeleteTaskModal />
