@@ -1,6 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const Container = styled.div`
+type ContainerProps = {
+  isDragging: boolean;
+}
+
+const Container = styled.div<ContainerProps>`
   width: 300px;
   height: 50px;
   background-color: blue;
@@ -37,6 +41,19 @@ const Container = styled.div`
       color: white;
     }
   }
+
+  ${props => props.isDragging && css`
+    border: 2px dashed white;
+    padding-top: 1rem;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    cursor: grab;
+
+    h3, img {
+      opacity: 0;
+    }
+  `}
 `;
 
 export { Container };

@@ -8,7 +8,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  gap: 0.5rem;
+  gap: 2rem;
 `;
 
 export { Container };

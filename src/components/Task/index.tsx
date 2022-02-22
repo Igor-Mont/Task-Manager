@@ -59,7 +59,7 @@ function Task({ id, title, index }: TaskProps): JSX.Element {
   dragRef(dropRef(ref))
 
   return (
-    <Container ref={ref}>
+    <Container isDragging={isDragging} ref={ref}>
       <div className="box-title">
         <h3>{title}</h3>
       </div>
