@@ -3,13 +3,18 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 25rem;
+  height: 580px;
   padding: 1rem 1.5rem;
   background-color: white;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem;
+
+  overflow-y: auto;
+  overflow-x: hidden;
 
 
   input {

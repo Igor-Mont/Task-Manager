@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: auto;
+  width: 100%;
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
   
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   gap: 2rem;

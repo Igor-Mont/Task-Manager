@@ -19,6 +19,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     -webkit-font-smoothing: antialiased;
   }
 
