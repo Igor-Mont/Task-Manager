@@ -2,12 +2,13 @@ import styled, { css } from "styled-components";
 
 type ContainerProps = {
   isDragging: boolean;
+  background?: string;
 }
 
 const Container = styled.div<ContainerProps>`
   width: 350px;
   height: 50px;
-  background-color: blue;
+  background-color: ${props => props.background ? props.background : 'blue'};
   
   display: flex;
   align-items: center;
@@ -18,7 +19,7 @@ const Container = styled.div<ContainerProps>`
   cursor: grabbing;
 
   animation: bounce 1s infinite alternate;
-    transition: all 0.7s;
+    transition: all 0.2s;
 
     @keyframes bounce {
       from {
@@ -56,7 +57,7 @@ const Container = styled.div<ContainerProps>`
   }
 
   ${props => props.isDragging && css`
-    border: 0.125rem dashed white;
+    border: 0.1rem dashed white;
     /* padding-top: 1.75rem; */
     border-radius: 0;
     background: transparent;

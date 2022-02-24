@@ -1,13 +1,13 @@
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { CreateTaskModal } from "./components/CreateTaskModal";
 import { DeleteTaskModal } from "./components/DeleteTaskModal";
-import { TaskList } from "./components/TaskList";
 import { UpdateTaskModal } from "./components/UpdateTaskModal";
 import { DndProvider } from 'react-dnd';
 import { GlobalStyle } from "./styles/global";
 import { ModalContextProvider } from './contexts/ModalProvider'
 import Modal from "react-modal";
 import { TaskContextProvider } from './contexts/TasksContext';
+import { MainBox } from './components/MainBox';
 
 Modal.setAppElement('#root');
 
@@ -18,7 +18,7 @@ function App() {
         <GlobalStyle />
       <DndProvider backend={HTML5Backend}>
         <TaskContextProvider>
-          <TaskList />
+          <MainBox />
         </TaskContextProvider>
       </DndProvider>
         <CreateTaskModal />

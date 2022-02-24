@@ -3,6 +3,8 @@ import { TaskContext } from '../../contexts/TasksContext';
 import { Task } from '../Task';
 import { Container } from './styles';
 
+const colors = ['green', 'pink', 'red', 'black'];
+
 function TaskList(): JSX.Element {
   const { tasks } = useContext(TaskContext);
 
