@@ -2,11 +2,18 @@ import { useContext } from 'react';
 import { TaskContext } from '../../contexts/TasksContext';
 import { Task } from '../Task';
 import { Container } from './styles';
+type Task = {
+  title: string;
+  id: number;
+  index: number;
+}
 
-const colors = ['green', 'pink', 'red', 'black'];
+type TaskListProps = {
+  tasks: Task[];
+}
 
-function TaskList(): JSX.Element {
-  const { tasks } = useContext(TaskContext);
+
+function TaskList({ tasks }: TaskListProps): JSX.Element {
 
   return (
     <Container>
