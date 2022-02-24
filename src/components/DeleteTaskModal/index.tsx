@@ -27,7 +27,7 @@ function DeleteTaskModal(): JSX.Element {
         >
           <img src={closeImg} alt="Fechar modal" />
         </button>
-        <h1>Delete Task nameTask</h1>
+        <h2>Delete Task nameTask</h2>
         <div className='box-btn'>
           <button className='cancel' onClick={onRequestClose}>Cancel</button>
           <button type='submit'>Confirm</button>

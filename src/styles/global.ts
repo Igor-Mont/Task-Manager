@@ -75,6 +75,23 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  button[type="submit"] {
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 3rem;
+    background-color: green;
+    color: #fff;
+    border-radius: 0.25rem;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: filter 0.2;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+
 `;
 
 export { GlobalStyle }
