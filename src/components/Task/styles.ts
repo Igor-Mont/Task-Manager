@@ -5,16 +5,29 @@ type ContainerProps = {
 }
 
 const Container = styled.div<ContainerProps>`
-  width: 300px;
+  width: 350px;
   height: 50px;
   background-color: blue;
-
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 0.5rem 1rem;
+  
+  padding: 1.5rem 1rem;
+  /* border-top: 0.5rem solid white; */
   cursor: grabbing;
+
+  animation: bounce 1s infinite alternate;
+    transition: all 0.7s;
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-0.1rem);
+      }
+    }
 
   .functional-box {
     width: 40%;
@@ -43,11 +56,14 @@ const Container = styled.div<ContainerProps>`
   }
 
   ${props => props.isDragging && css`
-    border: 2px dashed white;
-    padding-top: 1rem;
+    border: 0.125rem dashed white;
+    /* padding-top: 1.75rem; */
     border-radius: 0;
     background: transparent;
     box-shadow: none;
+
+    animation: none;
+
     cursor: grab;
 
     h3, img {

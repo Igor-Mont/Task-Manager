@@ -45,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
   .react-modal-content {
     width: 100%;
     max-width: 576px;
-    background-color: blue;
+    background-color: white;
     padding: 3rem;
     position: relative;
     border-radius: 0.25rem;
@@ -61,6 +61,18 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .react-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(0.8);
+    }
   }
 
 `;

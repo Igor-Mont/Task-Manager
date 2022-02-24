@@ -15,15 +15,15 @@ function App() {
 
   return (
     <ModalContextProvider>
-      <DndProvider backend={HTML5Backend}>
         <GlobalStyle />
+      <DndProvider backend={HTML5Backend}>
         <TaskContextProvider>
           <TaskList />
         </TaskContextProvider>
+      </DndProvider>
         <CreateTaskModal />
         <UpdateTaskModal />
         <DeleteTaskModal />
-      </DndProvider>
     </ModalContextProvider>
   )
 }
