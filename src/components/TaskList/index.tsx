@@ -14,7 +14,7 @@ type TaskListProps = {
 
 
 function TaskList({ tasks }: TaskListProps): JSX.Element {
-
+  
   return (
     <Container>
       {tasks.map((task, index) => (<Task key={index} id={task.id} title={task.title} index={index}/>))}

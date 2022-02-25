@@ -2,8 +2,6 @@ import { Container } from "./styles";
 import { TaskList } from "../TaskList";
 import { useContext, useState } from "react";
 import { TaskContext } from "../../contexts/TasksContext";
-import { Task } from "../Task";
-
 
 function MainBox() {
   const { tasks } = useContext(TaskContext);
@@ -13,8 +11,10 @@ function MainBox() {
 
   return (
     <Container>
-      <h2>Hello, Igor</h2>
-      <input value={searchValue} onChange={e => setSearchValue(e.target.value)} type="search" placeholder="Search Task" />
+      <div className="top">
+        <h2>Hello, Igor</h2>
+        <input value={searchValue} onChange={e => setSearchValue(e.target.value)} type="search" placeholder="Search Task" />
+      </div>
       {!searchValue ? <TaskList tasks={tasks} /> : <TaskList tasks={filteredTasks} />}
     </Container>
   );

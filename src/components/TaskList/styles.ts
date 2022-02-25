@@ -11,6 +11,25 @@ const Container = styled.div`
   align-items: center;
 
   gap: 2rem;
+
+  @media (max-width: 510px){
+    height: auto;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.5rem; 
+  }
+
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(white, blue, white);
+    border-radius: 1.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 1.5rem;
+  }
 `;
 
 export { Container };
