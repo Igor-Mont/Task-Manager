@@ -30,7 +30,7 @@ function UpdateTaskModal(): JSX.Element {
           <img src={closeImg} alt="Fechar modal" />
         </button>
         <h2>Update Task Modal</h2>
-        <FormTask />
+        <FormTask action_word='Update'/>
       </Container>
     </Modal>
   );

@@ -10,6 +10,14 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+    >div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 1rem;
+    }
   }
 
   width: 33rem;

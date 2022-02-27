@@ -1,6 +1,10 @@
 import { Container } from "./styles";
 
-function FormTask() {
+type FormTaskProps = {
+  action_word: string;
+}
+
+function FormTask({ action_word }: FormTaskProps) {
   return (
     <Container>
       <input type="text" placeholder="Title" />
@@ -8,7 +12,7 @@ function FormTask() {
       <input type="date" placeholder="Due date" />
       <input type="number" max={5} min={1} value={0} placeholder="Priorty Level" />
       <button type="submit">
-        Update
+        {action_word}
       </button>
     </Container>
   );
